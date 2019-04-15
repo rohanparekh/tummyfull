@@ -28,9 +28,16 @@ public class MenuDAOImpl implements MenuDAO {
         item3.setItemName("Thumbsup");
         item3.setItemPrice(8.00d);
 
+
+        Item item4 = new Item();
+        item4.setItemId(4);
+        item4.setItemName("Idli Sambhar Combo");
+        item4.setItemPrice(12.00d);
+
         items.add(item1);
         items.add(item2);
         items.add(item3);
+        items.add(item4);
 
         return items;
     }
