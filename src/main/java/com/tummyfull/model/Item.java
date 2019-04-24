@@ -1,12 +1,16 @@
 package com.tummyfull.model;
 
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Item {
-    private int itemId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long itemId;
     private String itemName;
     private double itemPrice;
 
@@ -25,11 +29,11 @@ public class Item {
         return Objects.hash(itemId, itemName, itemPrice);
     }
 
-    public int getItemId() {
+    public Long getItemId() {
         return itemId;
     }
 
-    public void setItemId(int itemId) {
+    public void setItemId(Long itemId) {
         this.itemId = itemId;
     }
 

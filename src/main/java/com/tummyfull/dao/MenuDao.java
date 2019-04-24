@@ -3,10 +3,11 @@ package com.tummyfull.dao;
 
 import com.tummyfull.model.Item;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-public abstract class MenuRepository implements CrudRepository<Item, Long> {
+public interface MenuDao extends CrudRepository<Item, Long> {
 //    @Override
 //    public List<Item> findAllItems() {
 //        List<Item> items = new ArrayList<>();
@@ -40,8 +41,7 @@ public abstract class MenuRepository implements CrudRepository<Item, Long> {
 //        return items;
 //    }
 
+
     @Override
-    public Iterable<Item> findAll() {
-        return findAll();
-    }
+    Iterable<Item> findAll();
 }
