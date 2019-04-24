@@ -1,8 +1,10 @@
 package com.tummyfull.model;
 
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class Item {
     private int itemId;
     private String itemName;

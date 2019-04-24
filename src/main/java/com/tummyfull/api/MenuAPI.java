@@ -9,5 +9,5 @@ import java.util.List;
 @Component
 public interface MenuAPI {
 
-    public List<Item> getMenu();
+    List<Item> getMenu();
 }
